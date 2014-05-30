@@ -16,11 +16,9 @@ public class HeapSort {
 		for(int i = (length -1) / 2; i >= 0; i--) {
 			adjust(data, i, length);
 		}
-		int count = length - 1;
-		while(count > 0) {
+		for(int count = length - 1; count > 0; count--) {
 			swap(data, 0, count);
-			count--;
-			adjust(data, 0, count + 1);
+			adjust(data, 0, count);
 		}
 	}
 	
